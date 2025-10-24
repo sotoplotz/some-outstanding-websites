@@ -1,57 +1,123 @@
 /*Sticky Navigation Bar*/
-
 header {
-	background: #fff;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
 }
+
 nav {
-	position: sticky;
-	top: 0;
-	z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
+
 nav ul li {
-	margin-right: 1rem;
+    margin-right: 2rem;
 }
+
 nav ul li a {
-	text-decoration: none;
-	color: #333;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
 
 /*Smooth Scrolling and Hover Effects*/
-
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 nav ul li a:hover,
 nav ul li a:focus {
-	color: #007acc;
-	outline: none;
+    text-decoration: underline;
+    outline: none;
 }
 
 /*Hero Section with Fade-in Animation*/
-
 .cover {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: #222;
-	color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
 }
+
 .title {
-	font-size: 3rem;
-	text-transform: uppercase;
-	opacity: 0;
-	animation: fadeIn 2s forwards ease-in;
+    font-size: 3rem;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 2s forwards ease-in;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
+
 @keyframes fadeIn {
-	to {
-		opacity: 1;
-	}
+    to {
+        opacity: 1;
+    }
+}
+
+/* Secciones de análisis */
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #000;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Tarjetas de análisis */
+.card {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* Iframes de sitios web */
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
 }
