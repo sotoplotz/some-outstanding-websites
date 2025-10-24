@@ -12,14 +12,14 @@ body {
     background-color: #fff;
 }
 
-/* Contenedor base */
+/* Base container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Estilos base de tipografía */
+/* Base typography styles */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
@@ -33,13 +33,13 @@ ul, ol {
     margin-bottom: 1rem;
 }
 
-/* Estilos base de enlaces */
+/* Base link styles */
 a {
     color: #007acc;
     text-decoration: none;
 }
 
-/* Imágenes responsive */
+/* Responsive images */
 img {
     max-width: 100%;
     height: auto;

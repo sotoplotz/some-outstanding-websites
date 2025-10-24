@@ -67,7 +67,7 @@ nav ul li a:focus {
     }
 }
 
-/* Analisys section */
+/* Analysis section */
 
 section {
     padding: 4rem 0;
@@ -82,16 +82,16 @@ section h1 {
     letter-spacing: -0.02em;
 }
 
-/* Analisys cards */
+/* Analysis cards */
 
 .card {
     background-color: #fff;
     border: 1px solid #000;
     padding: 2rem;
     margin-bottom: 2rem;
-    /* transición para hover suave */
+    /* transition for smooth hover */
     position: relative;
-    overflow: hidden; /* para que el pseudo-elemento no sobresalga */
+    overflow: hidden; /* prevent visual overflow of effects */
     transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms cubic-bezier(.2,.9,.3,1);
     will-change: transform, box-shadow;
     cursor: default;
@@ -104,21 +104,20 @@ section h1 {
     letter-spacing: -0.01em;
 }
 
-/* Pseudo-elemento para brillo sutil y profundidad */
-/* Hover atractivo: sombra exterior dura y leve elevación */
+/* Attractive hover: hard outer shadow and slight elevation */
 .card:hover,
 .card:focus-within {
     transform: translateY(-6px) scale(1.01);
-    /* sombra exterior dura (mismo color que el borde) */
+    /* hard outer shadow (same color as the border) */
     box-shadow: 0 10px 0 #000;
     z-index: 2;
 }
 
-/* Accessibility: mostrar un foco claro cuando elementos internos reciban foco */
+/* Accessibility: show a clear focus when inner elements receive focus */
 .card:focus-within {
     outline: 2px solid rgba(0,0,0,0.08);
     outline-offset: 6px;
-    /* mantener la misma sombra dura cuando hay foco interno */
+    /* maintain the same hard shadow when there is internal focus */
     box-shadow: 0 10px 0 #000;
     transform: translateY(-6px) scale(1.01);
 }
