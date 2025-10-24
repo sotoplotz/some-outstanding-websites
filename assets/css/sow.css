@@ -1,15 +1,27 @@
-/*Sticky Navigation Bar*/
+/* Fixed Navigation Bar */
 
-header {
+:root {
+    --site-header-height: 64px; /* adjust if you change header sizing */
+}
+
+header.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--site-header-height);
     background: #fff;
     border-bottom: 1px solid #000;
-    padding: 1rem 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    /* keep nav centered and constrained while header is fixed */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 nav ul {
@@ -17,6 +29,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -27,6 +40,11 @@ nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
+}
+
+/* push main content down so it isn't covered by the fixed header */
+main {
+    margin-top: var(--site-header-height);
 }
 
 /*Smooth Scrolling and Hover Effects*/
