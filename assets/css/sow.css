@@ -1,4 +1,5 @@
 /*Sticky Navigation Bar*/
+
 header {
     background: #fff;
     border-bottom: 1px solid #000;
@@ -29,6 +30,7 @@ nav ul li a {
 }
 
 /*Smooth Scrolling and Hover Effects*/
+
 html {
     scroll-behavior: smooth;
 }
@@ -40,6 +42,7 @@ nav ul li a:focus {
 }
 
 /*Hero Section with Fade-in Animation*/
+
 .cover {
     display: flex;
     justify-content: center;
@@ -64,7 +67,8 @@ nav ul li a:focus {
     }
 }
 
-/* Secciones de análisis */
+/* Analisys section */
+
 section {
     padding: 4rem 0;
     border-bottom: 1px solid #000;
@@ -78,12 +82,19 @@ section h1 {
     letter-spacing: -0.02em;
 }
 
-/* Tarjetas de análisis */
+/* Analisys cards */
+
 .card {
     background-color: #fff;
     border: 1px solid #000;
     padding: 2rem;
     margin-bottom: 2rem;
+    /* transición para hover suave */
+    position: relative;
+    overflow: hidden; /* para que el pseudo-elemento no sobresalga */
+    transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms cubic-bezier(.2,.9,.3,1);
+    will-change: transform, box-shadow;
+    cursor: default;
 }
 
 .card h2 {
@@ -93,7 +104,27 @@ section h1 {
     letter-spacing: -0.01em;
 }
 
-/* Iframes de sitios web */
+/* Pseudo-elemento para brillo sutil y profundidad */
+/* Hover atractivo: sombra exterior dura y leve elevación */
+.card:hover,
+.card:focus-within {
+    transform: translateY(-6px) scale(1.01);
+    /* sombra exterior dura (mismo color que el borde) */
+    box-shadow: 0 10px 0 #000;
+    z-index: 2;
+}
+
+/* Accessibility: mostrar un foco claro cuando elementos internos reciban foco */
+.card:focus-within {
+    outline: 2px solid rgba(0,0,0,0.08);
+    outline-offset: 6px;
+    /* mantener la misma sombra dura cuando hay foco interno */
+    box-shadow: 0 10px 0 #000;
+    transform: translateY(-6px) scale(1.01);
+}
+
+/* Website iframes */
+
 iframe {
     width: 100%;
     border: none;
@@ -103,6 +134,7 @@ iframe {
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
