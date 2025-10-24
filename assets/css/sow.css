@@ -22,3 +22,14 @@ nav ul li a {
 	text-decoration: none;
 	color: #333;
 }
+
+/*Smooth Scrolling and Hover Effects*/
+
+html {
+	scroll-behavior: smooth;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+	color: #007acc;
+	outline: none;
+}
